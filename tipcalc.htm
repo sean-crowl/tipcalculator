@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="tipcalc.js"></script>
+</head>
+
+<body>
+    <div class="col-md-12 col-sm-12 col-xs-12" id="tipbody">
+        <div class="col-md-5 col-sm-5 col-xs-5" id="calculator" style="margin-left: 350px; background-image: url(http://www.pixeden.com/media/k2/galleries/165/003-subtle-light-pattern-background-texture-vol5.jpg); height: 600px;  border: 2px solid black; border-radius: 20px;">
+            <h1 style="text-align: center; color: navy;">Tip Calculator</h1>
+            <div class="col-md-12 col-sm-12 col-xs-12" style="border-top: 2px solid black; padding-top: 20px;">
+                <p style="color: navy; font-size: 18px; text-align: center;">How much was your bill?</p>
+                <label style="color: navy; font-size: 18px; margin-left: 150px;">$
+                    <input onfocus="this.value = ''" onkeypress="return isNumberKey(event)" type="text" maxlength="6" id="bill" style="width: 100px; border: 1px solid black;"/></label>
+                </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

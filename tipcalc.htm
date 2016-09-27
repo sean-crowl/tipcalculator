@@ -26,7 +26,30 @@
                 <p style="color: navy; font-size: 18px; text-align: center;">How much was your bill?</p>
                 <label style="color: navy; font-size: 18px; margin-left: 150px;">$
                     <input onfocus="this.value = ''" onkeypress="return isNumberKey(event)" type="text" maxlength="6" id="bill" style="width: 100px; border: 1px solid black;"/></label>
-                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12" style="padding-top: 40px;">
+                <p style="color: navy; font-size: 18px; text-align: center;">How was your service?</p>
+                <select style="margin-left: 150px;" name="service" id="service">
+                <option value="" disabled selected>--Select an Option--</option>
+                <option value="30">30% - Outstanding</option>
+                <option value="20">20% - Good</option>
+                <option value="15">15% - It was okay</option>
+                <option value="10">10% - Bad</option>
+                <option value="5">5% - Terrible</option>
+                </select>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12" style="padding-top: 40px; margin-bottom: 40px;">
+                <p style="color: navy; font-size: 18px; text-align: center;">How many people are sharing the bill?</p>
+                <input onfocus="this.value = ''" onkeypress="return isNumberKey(event)" type="text" maxlength="1" id="people" style="width: 30px; border: 1px solid black; margin-left: 170px;"
+                /><label style="color: navy; font-size: 18px"> people</label>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12" style="border-top: 2px solid black; padding-top: 20px;">
+                <button class="btn btn-primary" id="calcbtn" style="font-size: 40px; margin-left: 115px; padding: 10px;">Calculate!</button>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12" style="padding-top: 20px;">
+            <label style="color: navy; font-size: 18px; margin-left: 125px;">Tip Total:
+                    <input onfocus="this.value = ''" onkeypress="return isNumberKey(event)" type="text" maxlength="6" id="total" style="width: 100px; border: 1px solid black;"/></label>
+
 
         </div>
     </div>

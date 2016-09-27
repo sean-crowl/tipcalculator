@@ -7,3 +7,19 @@ function isNumberKey(evt)
 
           return true;
        }
+
+var $ = function (id) {
+return document.getElementById(id);
+}
+var calc = function () {
+    var bill = parseInt( $("bill").value );
+    var tip = parseInt( $("service").value );
+    var people = parseInt( $("people").value );
+    var total = bill * tip / people / 100;
+
+    $("total").value = total.toFixed(2);
+} 
+
+onload = function () {
+$("calcbtn").onclick = calc;
+}

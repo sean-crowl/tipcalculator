@@ -8,20 +8,30 @@ function isNumberKey(evt)
           return true;
        }
 
-var $ = function (id) {
-return document.getElementById(id);
-}
 var calc = function () {
-    var bill = parseInt( $("bill").value );
-    var tip = parseInt( $("service").value );
-    var people = parseInt( $("people").value );
+    var bill = parseInt( $("#bill").val() );
+    var tip = parseInt( $("#service").val() );
+    var people = parseInt( $("#people").val() );
     var total = bill * tip / people / 100;
-    var totalp = (bill + total) / people;
+    var split = (bill + total) / people;
+    console.log(bill);
+    console.log(tip);
+    console.log(people);
+    if (isNaN(bill)) {
+        alert("You must enter a bill amount.");
+    }
+    if (isNaN(tip)) {
+        alert("You must choose a level of service and tip amount.");
+    }
 
-    $("total").value = total.toFixed(2);
-    $("perperson").value = totalp.toFixed(2);
-} 
 
-onload = function () {
-$("calcbtn").onclick = calc;
+    $("#total").val(total);
+    $("#perperson").val(split);
+    
+
 }
+
+
+$(function () {
+$("#calcbtn").on("click", calc);
+});

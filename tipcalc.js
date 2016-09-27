@@ -30,6 +30,16 @@ var calc = function () {
 
 }
 
+var clear = function() {
+    $("#bill").val("");
+    $("#service").val("");
+    $("#people").val("");
+    $("#total").val("");
+    $("#perperson").val("");
+
+}
+
 $(function () {
 $("#calcbtn").on("click", calc);
+$("#clearbtn").on("click", clear);
 });

@@ -11,12 +11,13 @@ function isNumberKey(evt)
 var calc = function () {
     var bill = parseInt( $("#bill").val() );
     var tip = parseInt( $("#service").val() );
-    var people = parseInt( $("#people").val() );
+    var people = ( $("#people").val() );
+    people = people == "" ?"1": people; 
     var total = bill * tip / people / 100;
+    var totalfixed = total.toFixed(2);
     var split = (bill + total) / people;
-    console.log(bill);
-    console.log(tip);
-    console.log(people);
+    var splitfixed = split.toFixed(2);
+    people = parseInt(people);
     if (isNaN(bill)) {
         alert("You must enter a bill amount.");
     }
@@ -24,13 +25,10 @@ var calc = function () {
         alert("You must choose a level of service and tip amount.");
     }
 
-
-    $("#total").val(total);
-    $("#perperson").val(split);
-    
+    $("#total").val(totalfixed)
+    $("#perperson").val(splitfixed)
 
 }
-
 
 $(function () {
 $("#calcbtn").on("click", calc);

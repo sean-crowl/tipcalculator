@@ -16,8 +16,10 @@ var calc = function () {
     var tip = parseInt( $("service").value );
     var people = parseInt( $("people").value );
     var total = bill * tip / people / 100;
+    var totalp = (bill + total) / people;
 
     $("total").value = total.toFixed(2);
+    $("perperson").value = totalp.toFixed(2);
 } 
 
 onload = function () {
